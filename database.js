@@ -19,23 +19,4 @@ database
     console.error(err);
   });
 
-database
-  .query("select * from movies")
-  .then((result) => {
-    console.log(result);
-  })
-  .catch((err) => {
-    console.error(err);
-  });
-
-database
-  .query("select * from users")
-  .then((result) => {
-    const users = result[0];
-    console.log(users);
-  })
-  .catch((err) => {
-    console.error(err);
-  });
-
 module.exports = database;
